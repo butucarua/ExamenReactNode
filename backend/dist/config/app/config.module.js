@@ -7,7 +7,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppConfigModule = void 0;
-const Joi = require("@hapi/joi");
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const config_service_1 = require("./config.service");
@@ -19,9 +18,6 @@ AppConfigModule = __decorate([
         imports: [
             config_1.ConfigModule.forRoot({
                 load: [configuration_1.default],
-                validationSchema: Joi.object({
-                    API_PORT: Joi.number().required(),
-                }),
             }),
         ],
         providers: [config_1.ConfigService, config_service_1.AppConfigService],

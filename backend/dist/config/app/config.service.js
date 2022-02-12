@@ -16,23 +16,8 @@ let AppConfigService = class AppConfigService {
     constructor(configService) {
         this.configService = configService;
     }
-    get host() {
-        return this.configService.get('app.host');
-    }
     get port() {
-        return this.configService.get('app.port');
-    }
-    get env() {
-        return this.configService.get('app.env');
-    }
-    get isProduction() {
-        return this.configService.get('app.env') === 'production';
-    }
-    get uri() {
-        return this.configService.get('app.uri');
-    }
-    get domain() {
-        return this.configService.get('app.domain');
+        return this.configService.get("app.port");
     }
 };
 AppConfigService = __decorate([
