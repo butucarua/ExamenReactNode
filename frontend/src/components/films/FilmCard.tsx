@@ -97,7 +97,7 @@ export const FilmCard = ({film, setErrors, bookGenres}: any) => {
       genre: newBookGenre
     }
 
-    let createdBook = await baseRequestService(`http://localhost:4040/api/book/`, { method: 'POST', headers: {
+    let createdBook = await baseRequestService(`https://examen-andreea-react-node.herokuapp.com/api/book/`, { method: 'POST', headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       }, data: newBook })
@@ -113,7 +113,7 @@ export const FilmCard = ({film, setErrors, bookGenres}: any) => {
 
   const handleGetBooks = async () => {
     try {
-    const books = await baseRequestService(`http://localhost:4040/api/book/`, { method: 'GET', headers: {
+    const books = await baseRequestService(`https://examen-andreea-react-node.herokuapp.com/api/book/`, { method: 'GET', headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       }})

@@ -63,16 +63,6 @@ const SWApiFp = function (configuration?: Configuration) {
           })
       };
     },
-    // searchSymbols(keywords: string, datatype?: string, options?: any): (basePath?: string) => Promise<any> {
-    //   const localVarFetchArgs = SWApiFetchParamCreator(configuration!).searchSymbols(keywords, datatype, options);
-
-    //   return (basePath: string = BASE_PATH) => {
-    //     return baseRequestService(basePath + localVarFetchArgs.url, localVarFetchArgs.options)
-    //       .catch(err => {
-    //         throw err
-    //       })
-    //   };
-    // },
   }
 }
 
