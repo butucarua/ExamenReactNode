@@ -64,7 +64,7 @@ export const Films = () => {
   const getFilmsByName = async (name: string) => {
     try {
       setLoading(true)
-      let shelves = await baseRequestService(`http://localhost:4040/api/shelf/name/${name}`, { method: 'GET', headers: {
+      let shelves = await baseRequestService(`https://examen-andreea-react-node.herokuapp.com/api/shelf/name/${name}`, { method: 'GET', headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       }} )
@@ -81,7 +81,7 @@ export const Films = () => {
   const createShelf = async () => {
     try {
       setLoading(true)
-      let newShelf = await baseRequestService(`http://localhost:4040/api/shelf/`, { method: 'POST', headers: {
+      let newShelf = await baseRequestService(`https://examen-andreea-react-node.herokuapp.com/api/shelf/`, { method: 'POST', headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       }, data: {
@@ -101,7 +101,7 @@ export const Films = () => {
   const getGenres = async () => {
     try {
       setLoading(true)
-      let genres = await baseRequestService(`http://localhost:4040/api/book/genres`, { method: 'GET', headers: {
+      let genres = await baseRequestService(`https://examen-andreea-react-node.herokuapp.com/api/book/genres`, { method: 'GET', headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       }})
