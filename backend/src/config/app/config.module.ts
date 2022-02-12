@@ -10,9 +10,6 @@ import configuration from '@/config/app/configuration';
   imports: [
     ConfigModule.forRoot({
       load: [configuration],
-      validationSchema: Joi.object({
-        API_PORT: Joi.number().required(),
-      }),
     }),
   ],
   providers: [ConfigService, AppConfigService],

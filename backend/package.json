@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "npm run build && node dist/main",
     "start:dev": "nest start --watch",
     "start:dev:all": "pm2 start pm2.config.js --no-daemon && pm2 logs",
     "stop:dev:all": "pm2 stop pm2.config.js",
